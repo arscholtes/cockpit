@@ -18,6 +18,12 @@ struct ContentView: View {
             Text("\(total)")
         }
         .padding()
+        .task{ do {
+             try String(contentsOfFile: "/Users/alexscholtes/Developer/cockpit/fixtures/milestone-1.jsonl",
+                     encoding: .utf8)
+        }
+            catch{print(error)}
+        }
     }
 }
 
